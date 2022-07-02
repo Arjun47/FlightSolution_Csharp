@@ -1,0 +1,80 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2041
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flights.Common", "Flights.Common\Flights.Common.csproj", "{4BDB71C3-D416-4F66-8176-53E97BC0E90D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flights.DAL", "Flights.DAL\Flights.DAL.csproj", "{97D3FAB1-7DB9-4EB8-BDF4-7829218871B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flights.BL", "Flights.BL\Flights.BL.csproj", "{655D5449-FB66-4388-A683-EF253296DF05}"
+	ProjectSection(ProjectDependencies) = postProject
+		{067F9208-E1B6-4A3C-90C4-981B47538A99} = {067F9208-E1B6-4A3C-90C4-981B47538A99}
+		{7B9A5DE5-8D21-416D-9F3B-BCFB982D122D} = {7B9A5DE5-8D21-416D-9F3B-BCFB982D122D}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flights.Services", "Flights.Services\Flights.Services.csproj", "{7B9A5DE5-8D21-416D-9F3B-BCFB982D122D}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Flights.WebPL", "Flights.WebPL\", "{94DBC6C0-B653-41FF-854E-8F4956E35157}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		ProjectReferences = "{655d5449-fb66-4388-a683-ef253296df05}|Flights.BL.dll;{97D3FAB1-7DB9-4EB8-BDF4-7829218871B3}|Flights.DAL.dll;{4BDB71C3-D416-4F66-8176-53E97BC0E90D}|Flights.Common.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_56621"
+		Debug.AspNetCompiler.PhysicalPath = "Flights.WebPL\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_56621\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_56621"
+		Release.AspNetCompiler.PhysicalPath = "Flights.WebPL\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_56621\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "56621"
+		SlnRelativePath = "Flights.WebPL\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchService", "SearchService\SearchService.csproj", "{067F9208-E1B6-4A3C-90C4-981B47538A99}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4BDB71C3-D416-4F66-8176-53E97BC0E90D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BDB71C3-D416-4F66-8176-53E97BC0E90D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BDB71C3-D416-4F66-8176-53E97BC0E90D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BDB71C3-D416-4F66-8176-53E97BC0E90D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97D3FAB1-7DB9-4EB8-BDF4-7829218871B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97D3FAB1-7DB9-4EB8-BDF4-7829218871B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97D3FAB1-7DB9-4EB8-BDF4-7829218871B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97D3FAB1-7DB9-4EB8-BDF4-7829218871B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{655D5449-FB66-4388-A683-EF253296DF05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{655D5449-FB66-4388-A683-EF253296DF05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{655D5449-FB66-4388-A683-EF253296DF05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{655D5449-FB66-4388-A683-EF253296DF05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B9A5DE5-8D21-416D-9F3B-BCFB982D122D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B9A5DE5-8D21-416D-9F3B-BCFB982D122D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B9A5DE5-8D21-416D-9F3B-BCFB982D122D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B9A5DE5-8D21-416D-9F3B-BCFB982D122D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94DBC6C0-B653-41FF-854E-8F4956E35157}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94DBC6C0-B653-41FF-854E-8F4956E35157}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94DBC6C0-B653-41FF-854E-8F4956E35157}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{94DBC6C0-B653-41FF-854E-8F4956E35157}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{067F9208-E1B6-4A3C-90C4-981B47538A99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{067F9208-E1B6-4A3C-90C4-981B47538A99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{067F9208-E1B6-4A3C-90C4-981B47538A99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{067F9208-E1B6-4A3C-90C4-981B47538A99}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BC286125-96F2-41F0-9648-274A9F449735}
+	EndGlobalSection
+EndGlobal

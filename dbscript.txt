@@ -1,0 +1,49 @@
+CREATE TABLE [dbo].[Flights](
+	[FlightNumber] [varchar](20) NOT NULL,
+	[FlightName] [varchar](20) NOT NULL,
+	[Origin] [varchar](20) NOT NULL,
+	[Destination] [varchar](20) NOT NULL,
+	[SeatsAvailable] [int] NOT NULL,
+	[Id] [int] IDENTITY(1,1) NOT NULL
+) ON [PRIMARY]
+GO
+
+CREATE PROC [dbo].[uspAddNewFlight](@flightNo varchar(20),
+@flightName varchar(20),@origin varchar(20),
+@destination varchar(20),@seatsAvailable int
+)
+AS
+INSERT INTO Flights VALUES('FN-'+ @flightNo,@flightName,@origin,
+@destination,@seatsAvailable)
+
+CREATE PROC [dbo].[uspSearchFlights](@origin varchar(20),
+@destination varchar(20)
+)
+AS
+SELECT Id,FlightNumber,FlightName,SeatsAvailable From Flights
+WHERE Origin=@origin and Destination=@destination
+
+CREATE PROC [dbo].[uspSearchFlightById](
+@id int)
+AS 
+SELECT FlightNumber,FlightName,Origin,Destination,SeatsAvailable
+FROM Flights
+WHERE Id=@id
+
+CREATE PROC [dbo].[uspUpdateFlightById](
+@flightNo varchar(20),@flightName varchar(20),
+@origin varchar(20),@destination varchar(20),
+@seatsAvailable int,
+@id int)
+AS 
+UPDATE Flights SET
+FlightNumber=@flightNo,
+FlightName=@flightName,
+Origin=@origin,
+Destination=@destination,
+SeatsAvailable=@seatsAvailable
+
+CREATE PROC [dbo].[uspDeleteFlight]
+(@id int)
+AS 
+DELETE FROM Flights WHERE Id=@id
